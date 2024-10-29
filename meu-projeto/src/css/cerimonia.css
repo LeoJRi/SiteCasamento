@@ -1,0 +1,62 @@
+.wedding-page {
+    font-family: Arial, sans-serif;
+    background-color: #FFF;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+.header {
+    background-color: #FFF;
+    padding: 40px 20px;
+}
+
+.header h1 {
+    color: #DAA520;
+    font-size: 2.5em;
+}
+
+.details-section,
+.location-section,
+.rsvp-section {
+    background: #ebebeb;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.banner {
+    flex: 1;
+    height: 2px;
+    background-color: #DAA520;
+}
+
+.logo-container {
+    margin: 0 10px;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+}
+
+.vinicula-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+}
