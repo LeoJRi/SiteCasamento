@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../css/header.css'; 
+import '../css/header.css';
+import logo from '../images/logo.png';
 
 const Header = () => {
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -35,6 +36,11 @@ const Header = () => {
     return (
         <header>
             <div className="countdown">
+                <div className="icon-container">
+                    <Link to="/">
+                        <img src={logo} alt="Logo" className="icon" />
+                    </Link>
+                </div>
                 <div className="countdown-timer">
                     <div className="time-segment">
                         <span className="time-value">{timeLeft.days}</span>
@@ -56,7 +62,6 @@ const Header = () => {
             </div>
             <div className="banner-header">
                 <div className="banner-content">
-                    <h1>Bem-vindo ao Meu Site</h1>
                     <div className="menu-icon" onClick={toggleMenu}>
                         <span className="bar"></span>
                         <span className="bar"></span>

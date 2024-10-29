@@ -16,6 +16,14 @@
     text-align: center;
 }
 
+.icon-container {
+    position: absolute;
+}
+
+.icon {
+    height: 40px;
+}
+
 .countdown {
     height: 80px;
     color: #DAA520;
@@ -64,11 +72,6 @@
     font-weight: bold;
 }
 
-.banner-content h1 {
-    margin-bottom: 15px;
-}
-
-
 .menu-icon {
     display: none;
     flex-direction: column;
@@ -107,6 +110,7 @@
         position: absolute;
         top: 30px;
         right: 15px;
+        z-index: 10;
     }
 
     .nav-links {
@@ -127,7 +131,15 @@
         display: flex;
     }
 
+    .banner-content nav ul {
+        flex-direction: column;
+    }
+
     .nav-links ul li {
         margin: 15px 0;
+    }
+
+    .banner-header {
+        height: 300px;
     }
 }
