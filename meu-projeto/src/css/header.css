@@ -67,3 +67,67 @@
 .banner-content h1 {
     margin-bottom: 15px;
 }
+
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #EBEBEB;
+    margin: 2px 0;
+    transition: 0.4s;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links ul li a {
+    color: #EBEBEB;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+        position: absolute;
+        top: 30px;
+        right: 15px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links ul li {
+        margin: 15px 0;
+    }
+}

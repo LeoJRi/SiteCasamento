@@ -4,6 +4,7 @@ import '../css/header.css';
 
 const Header = () => {
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         const targetDate = new Date('2025-02-01T00:18:00');
@@ -24,12 +25,14 @@ const Header = () => {
             }
         }, 1000);
 
-        return () => clearInterval(countdown); // Limpa o timer quando o componente é desmontado
+        return () => clearInterval(countdown);
     }, []);
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
     return (
-        
         <header>
             <div className="countdown">
                 <div className="countdown-timer">
@@ -54,12 +57,17 @@ const Header = () => {
             <div className="banner-header">
                 <div className="banner-content">
                     <h1>Bem-vindo ao Meu Site</h1>
-                    <nav>
+                    <div className="menu-icon" onClick={toggleMenu}>
+                        <span className="bar"></span>
+                        <span className="bar"></span>
+                        <span className="bar"></span>
+                    </div>
+                    <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
                         <ul>
-                            <li><Link to="/DressCode">Dess Code</Link></li>
+                            <li><Link to="/DressCode">Dress Code</Link></li>
                             <li><Link to="/ListaPresentes">Lista de Presentes</Link></li>
-                            <li><Link to="/ConfirmacaoPresencas">Confirmacao de Presencas</Link></li>
-                            <li><Link to="/Cerimonia">Cerimonia</Link></li>
+                            <li><Link to="/ConfirmacaoPresencas">Confirmação de Presenças</Link></li>
+                            <li><Link to="/Cerimonia">Cerimônia</Link></li>
                         </ul>
                     </nav>
                 </div>
