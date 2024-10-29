@@ -29,7 +29,7 @@ const Cerimonia = () => {
     return (
         <div className="wedding-page">
             <header className="header">
-                <h1>Cerimônia de Casamento</h1>
+                <h1>Cerimônia do Casamento</h1>
                 <p>Estamos felizes em compartilhar esse momento especial com você!</p>
             </header>
 
@@ -79,12 +79,16 @@ const Cerimonia = () => {
                 </button>
             </section>
 
+            <div className="banner-container">
+            <div className="banner"></div>
             <div className="wedding-page">
                 {showScroll && (
                     <button className="scroll-to-top" onClick={scrollToTop}>
                         ↑
                     </button>
                 )}
+            </div>
+            <div className="banner"></div>
             </div>
 
             <footer className="footer">
