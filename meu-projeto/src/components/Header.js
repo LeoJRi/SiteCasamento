@@ -6,7 +6,7 @@ const Header = () => {
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
     useEffect(() => {
-        const targetDate = new Date('2025-02-01T00:00:00');
+        const targetDate = new Date('2025-02-01T00:18:00');
         
         const countdown = setInterval(() => {
             const now = new Date();
@@ -32,7 +32,24 @@ const Header = () => {
         
         <header>
             <div className="countdown">
-                <p>{`${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}</p>
+                <div className="countdown-timer">
+                    <div className="time-segment">
+                        <span className="time-value">{timeLeft.days}</span>
+                        <span className="time-label">Dias</span>
+                    </div>
+                    <div className="time-segment">
+                        <span className="time-value">{timeLeft.hours}</span>
+                        <span className="time-label">Horas</span>
+                    </div>
+                    <div className="time-segment">
+                        <span className="time-value">{timeLeft.minutes}</span>
+                        <span className="time-label">Minutos</span>
+                    </div>
+                    <div className="time-segment">
+                        <span className="time-value">{timeLeft.seconds}</span>
+                        <span className="time-label">Segundos</span>
+                    </div>
+                </div>
             </div>
             <div className="banner-header">
                 <div className="banner-content">
