@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFF;
+  color: #333;
+  text-align: center;
+}
+
+.wedding-page {
+  background-color: #ebebeb;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #FFF;
+  padding: 40px 20px;
+}
+
+.header-title {
+  color: #DAA520;
+  font-size: 2.5em;
+}
+
+.header-description {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.rsvp-section {
+  background: #FFF;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rsvp-title {
+  color: #DAA520;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.rsvp-description {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-label {
+  font-size: 16px;
+  color: #333;
+}
+
+.form-input {
+  padding: 10px;
+  border: 2px solid #DAA520;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-checkbox {
+  margin-bottom: 20px;
+}
+
+.submit-button {
+  padding: 12px 20px;
+  background-color: #DAA520;
+  color: #FFF;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #b88e1d;
+}
+
+.footer {
+  margin-top: 40px;
+  padding: 10px;
+  background-color: #FFF;
+}
+
+.footer-text {
+  font-size: 1.2em;
+}
+
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.banner {
+  flex: 1;
+  height: 2px;
+  background-color: #DAA520;
+}
+
+.logo-container {
+  margin: 0 10px;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+}
+
+.form-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #DAA520;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.form-checkbox:checked {
+  background-color: #DAA520;
+  border-color: #DAA520;
+}
+
+.form-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #FFF;
+  border-radius: 2px;
+  transition: background-color 0.3s;
+}
+
+.form-checkbox:hover {
+  border-color: #b88e1d;
+}
+
+.form-checkbox:checked:hover {
+  background-color: #b88e1d;
+}
