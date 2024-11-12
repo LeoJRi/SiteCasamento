@@ -27,6 +27,7 @@ const Header = () => {
         }, 1000);
 
         return () => clearInterval(countdown);
+        
     }, []);
 
     const toggleMenu = () => {
@@ -69,10 +70,10 @@ const Header = () => {
                     </div>
                     <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
                         <ul>
-                            <li><Link to="/DressCode">Dress Code</Link></li>
-                            <li><Link to="/ListaPresentes">Lista de Presentes</Link></li>
-                            <li><Link to="/ConfirmacaoPresencas">Confirmação de Presenças</Link></li>
-                            <li><Link to="/Cerimonia">Cerimônia</Link></li>
+                            <li><Link to="/DressCode" onClick={() => setIsMenuOpen(false)}>Dress Code</Link></li>
+                            <li><Link to="/ListaPresentes" onClick={() => setIsMenuOpen(false)}>Lista de Presentes</Link></li>
+                            <li><Link to="/ConfirmacaoPresencas" onClick={() => setIsMenuOpen(false)}>Confirmação de Presenças</Link></li>
+                            <li><Link to="/Cerimonia" onClick={() => setIsMenuOpen(false)}>Cerimônia</Link></li>
                         </ul>
                     </nav>
                 </div>
