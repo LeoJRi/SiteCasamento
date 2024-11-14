@@ -23,7 +23,7 @@ const ConfirmacaoPresenca = () => {
     };
 
     emailjs
-      .send('your_service_id', 'your_template_id', templateParams, 'your_user_id')
+      .send('service_42bjl8s', 'template_a3t2307', templateParams, 'GRZvHGzmU-6EZ85z4')
       .then(
         (response) => {
           alert('Sua confirmação foi enviada com sucesso!');
@@ -40,6 +40,14 @@ const ConfirmacaoPresenca = () => {
         <h1 className="header-title">Confirmação de Presença</h1>
         <p className="header-description">Estamos felizes em contar com a sua presença no nosso grande dia!</p>
       </header>
+
+      <div className="banner-container">
+        <div className="banner"></div>
+        <div className="logo-container">
+          <img src={logo} alt="Logo" className="logo" />
+        </div>
+        <div className="banner"></div>
+      </div>
 
       <div className="banner-container">
         <div className="banner"></div>
@@ -67,7 +75,7 @@ const ConfirmacaoPresenca = () => {
           </div>
 
           <div className="form-field">
-            <label htmlFor="levaAcompanhante" className="form-label">Vai levar acompanhante?</label>
+            <label htmlFor="levaAcompanhante" className="form-label">Possui cônjuge?</label>
             <input
               type="checkbox"
               id="levaAcompanhante"

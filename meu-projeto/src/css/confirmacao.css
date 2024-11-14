@@ -137,6 +137,7 @@ body {
   position: relative;
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s;
+  left: 45%;
 }
 
 .form-checkbox:checked {
@@ -145,13 +146,12 @@ body {
 }
 
 .form-checkbox:checked::after {
-  content: '';
+  content: '❤️';
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 0px;
+  left: -1px;
   width: 8px;
   height: 8px;
-  background-color: #FFF;
   border-radius: 2px;
   transition: background-color 0.3s;
 }
