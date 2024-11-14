@@ -36,3 +36,28 @@ button:hover {
 .scroll-to-top:hover {
   background-color: #b5941b;
 }
+
+.wedding-page {
+  background-color: #FFFFFF;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #FFF;
+  padding: 10px 20px;
+}
+
+.header-title {
+  color: #DAA520;
+  font-size: 1.7em;
+}
+
+.header-description {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.text-description {
+  font-size: 12px;
+}

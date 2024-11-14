@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import '../css/confirmacao.css';
+import '../css/components.css';
 import logo from '../images/logo.png';
 
 const ConfirmacaoPresenca = () => {

@@ -11,27 +11,6 @@ body {
   text-align: center;
 }
 
-.wedding-page {
-  background-color: #ebebeb;
-  padding: 20px;
-  min-height: 100vh;
-}
-
-.header {
-  background-color: #FFF;
-  padding: 40px 20px;
-}
-
-.header-title {
-  color: #DAA520;
-  font-size: 2.5em;
-}
-
-.header-description {
-  font-size: 1.2em;
-  margin-top: 10px;
-}
-
 .rsvp-section {
   background: #FFF;
   padding: 20px;
