@@ -37,10 +37,10 @@ const ConfirmacaoPresenca = () => {
 
   return (
     <div className="wedding-page">
-      <header className="header">
+      <div className="header">
         <h1 className="header-title">Confirmação de Presença</h1>
         <p className="header-description">Estamos felizes em contar com a sua presença no nosso grande dia!</p>
-      </header>
+      </div>
 
       <div className="banner-container">
         <div className="banner"></div>
