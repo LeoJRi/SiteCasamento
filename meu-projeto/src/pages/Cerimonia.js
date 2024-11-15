@@ -80,9 +80,9 @@ const Cerimonia = () => {
             <section className="rsvp-section">
                 <h2 className="header-title">Ja sabe se vai ir?</h2>
                 <p>Confirmação de Presença, ficaremos muito felizes de recebe-los e estarem conosco nesse momento tão especial </p>
-                <p>Por favor, confirme sua presença até 10º de Janeiro.</p>
-                <button >
-                    <Link to="/ConfirmacaoPresencas">Confirmacao de Presencas</Link>
+                <p>Por favor, confirme sua presença até 5º de Janeiro.</p>
+                <button className="to-confirm" >
+                    <Link to="/ConfirmacaoPresencas">Confirmacao de Presenças</Link>
                 </button>
             </section>
 
@@ -91,7 +91,7 @@ const Cerimonia = () => {
                 <div className="wedding-page">
                     {showScroll && (
                         <button className="scroll-to-top" onClick={scrollToTop}>
-                            ↑
+                            ↑ <br />                            
                         </button>
                     )}
                 </div>
