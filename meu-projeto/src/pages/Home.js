@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/components.css';
-import logo from '../images/logo.png';
+import logo from '../images/logo.svg';
+import fotoHome from '../images/fotoHome.jpeg'
 
 const Home = () => {
     return (
@@ -12,9 +13,14 @@ const Home = () => {
                 <p className="text-description">Navegue pelo menu para conhecer nossa história, nossa família, dicas para o dia do evento (dress code, perguntas frequentes) e detalhes sobre a programação e o local.</p>
                 <br />
                 <p className="text-description">Não se esqueça de confirmar sua presença! Nossa lista de presentes também está disponível aqui no site.</p>
-            </div>  
+            </div>
 
-            //imagens
+            <div className="banner-container">
+                <div className="image-container">
+                    <img src={fotoHome} alt="Foto ilustrativa da página inicial" className="image-home" />
+                </div>
+            </div>
+
 
             <div className="rsvp-section">
                 <h1 className="header-title">Era uma vez...</h1>
@@ -24,7 +30,7 @@ const Home = () => {
                 <br />
                 <p className="text-description">E assim aconteceu conosco, foi de um jeito leve e carinhoso que nos envolvemos e deixamos o amor nos guiar.</p>
             </div>
-            
+
             <div className="banner-container">
                 <div className="banner"></div>
                 <div className="logo-container">

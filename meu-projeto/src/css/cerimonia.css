@@ -34,10 +34,52 @@
 
 .banner-container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin: 20px 0;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
 }
+
+.image-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.image-home {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+
+    .banner-container {
+        padding: 10px;
+    }
+
+    .image-container {
+        padding: 5px;
+    }
+
+    .image-home {
+        border-radius: 5px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .banner-container {
+        padding: 40px;
+    }
+
+    .image-home {
+        border-radius: 15px;
+    }
+}
+
 
 .banner {
     flex: 1;

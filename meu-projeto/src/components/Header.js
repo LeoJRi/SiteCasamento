@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/header.css';
-import logo from '../images/logo.png';
+import logo from '../images/logo.svg';
 
 const Header = () => {
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -71,7 +71,7 @@ const Header = () => {
                     <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
                         <ul>
                             <li><Link to="/ListaPresentes" onClick={() => setIsMenuOpen(false)}>Lista de Presentes</Link></li>
-                            <li><Link to="/ConfirmacaoPresencas" onClick={() => setIsMenuOpen(false)}>Confirmação de Presenças</Link></li>
+                            <li><Link to="/ConfirmacaoPresencas" onClick={() => setIsMenuOpen(false)}>Confirmação de Presença / Dress Code</Link></li>
                             <li><Link to="/Cerimonia" onClick={() => setIsMenuOpen(false)}>Cerimônia</Link></li>
                         </ul>
                     </nav>

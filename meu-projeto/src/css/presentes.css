@@ -38,3 +38,12 @@
 .produtos button:hover {
     background-color: #218838;
 }
+
+.produto-imagem {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+

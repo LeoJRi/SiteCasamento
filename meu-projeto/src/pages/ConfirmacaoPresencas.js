@@ -1,10 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import emailjs from 'emailjs-com';
 import '../css/confirmacao.css';
 import '../css/components.css';
-import logo from '../images/logo.png';
+import logo from '../images/logo.svg';
 
 const ConfirmacaoPresenca = () => {
+  const [showScroll, setShowScroll] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 300) {
+      setShowScroll(true);
+    } else {
+      setShowScroll(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const [nome, setNome] = useState('');
   const [levaAcompanhante, setLevaAcompanhante] = useState(false);
   const [nomeAcompanhante, setNomeAcompanhante] = useState('');
@@ -34,21 +55,25 @@ const ConfirmacaoPresenca = () => {
         }
       );
   };
-
   return (
     <div className="wedding-page">
-      <div className="header">
-        <h1 className="header-title">Confirmação de Presença</h1>
-        <p className="header-description">Estamos felizes em contar com a sua presença no nosso grande dia!</p>
-      </div>
+      <section className="rsvp-section">
+        <h2 className="rsvp-title">Dress Code</h2>
+        <p className="text-description">Queridos convidados</p>
+        <p className="text-description">Para que todos se sintam confortáveis e em harmonia com o clima especial do nosso casamento, definimos algumas orientações sobre o dress code:</p><br></br>
+        <h3 className='titleDressCode'>Para as Mulheres</h3><br></br>
+        <p className="text-description">•	Cores a evitar: Pedimos que <strong>não usem vestidos nas cores preto ou branco.</strong> <br></br><br></br>
+          •	Sapatos: Recomendamos o uso de saltos bloco ou sapatos mais estáveis, já que a cerimônia será realizada no gramado. Isso garantirá maior conforto e evitará imprevistos. <br></br><br></br>
+          •	Estilo do vestido: Escolham vestidos que valorizem o conforto e a elegância. Prefiram modelos com decotes moderados e comprimento apropriado, lembrando que é um casamento e que o dress code exige certa discrição.
+        </p><br></br>
+        <h3 className='titleDressCode'>Para os Homens</h3><br></br>
+        <p className="text-description">•	Cores a evitar:<strong> Evitem looks completamente all black (todo preto).</strong> Ternos pretos estão permitidos, mas a camisa e a gravata devem ser de outra cor, que não seja preta.</p><br></br>
+        <p className="text-description">Estamos ansiosos para celebrar esse dia especial com vocês e agradecemos a atenção e o carinho em seguir o dress code!</p>
+        <p className="text-description">Com amor, <br></br>
+          Os Noivos
+        </p>
 
-      <div className="banner-container">
-        <div className="banner"></div>
-        <div className="logo-container">
-          <img src={logo} alt="Logo" className="logo" />
-        </div>
-        <div className="banner"></div>
-      </div>
+      </section>
 
       <div className="banner-container">
         <div className="banner"></div>
@@ -60,7 +85,7 @@ const ConfirmacaoPresenca = () => {
 
       <section className="rsvp-section">
         <h2 className="rsvp-title">Confirmação de Presença</h2>
-        <p className="rsvp-description">Por favor, confirme sua presença para nossa cerimônia.</p>
+        <p className="text-description">Por favor, confirme sua presença para nossa cerimônia.</p><br></br>
 
         <form onSubmit={handleSubmit} className="rsvp-form">
           <div className="form-field">
@@ -104,9 +129,17 @@ const ConfirmacaoPresenca = () => {
         </form>
       </section>
 
-      <footer className="footer">
-        <p className="footer-text">Com amor, Francisco e Camila</p>
-      </footer>
+      <div className="banner-container">
+        <div className="banner"></div>
+        <div className="wedding-page">
+          {showScroll && (
+            <button className="scroll-to-top" onClick={scrollToTop}>
+              ↑ <br />
+            </button>
+          )}
+        </div>
+        <div className="banner"></div>
+      </div>
     </div>
   );
 };
