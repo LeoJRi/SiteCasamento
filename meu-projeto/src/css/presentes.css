@@ -26,7 +26,7 @@
 }
 
 .produtos button {
-    background-color: #28a745;
+    background-color: #DAA520;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -36,7 +36,7 @@
 }
 
 .produtos button:hover {
-    background-color: #218838;
+    background-color: #a77d13;
 }
 
 .produto-imagem {
