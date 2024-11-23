@@ -27,7 +27,7 @@ import quartoVisita from '../images/quartoVisita.jpeg';
 import parente from '../images/parente.jpeg'
 
 const produtos = [
-    { id: 1, nome: 'Tampão de ouvido para a noiva enquanto o noivo ronca', preco: 1.00, imagem: tampaoOuvido },
+    { id: 1, nome: 'Tampão de ouvido para a noiva enquanto o noivo ronca', preco: 1.00, imagem: tampaoOuvido, link: "https://www.google.com"},
     { id: 2, nome: 'Taxa para a noiva não jogar o buquê para sua amada', preco: 350.00, imagem: buque },
     { id: 3, nome: 'Cota de "amigos para sempre"', preco: 800.00, imagem: amigosSempre },
     { id: 4, nome: 'Alexa (para a noiva não mandar só no noivo)', preco: 499.90, imagem: alexa },
@@ -55,8 +55,9 @@ const produtos = [
 
 const Produtos = () => {
     const handleComprarViaPIX = (produto) => {
-        const redirectUrl = generatePagSeguroPaymentUrl(produto);
-        window.location.href = redirectUrl;
+        const redirectUrl = produto.link;
+        console.log(redirectUrl);
+        window.open(redirectUrl, '_blank');
     };
 
     const [showScroll, setShowScroll] = useState(false);
